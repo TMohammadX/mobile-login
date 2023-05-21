@@ -1,5 +1,10 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
+import {
+  GoogleAuthProvider,
+  GithubAuthProvider,
+  GameCenterAuthProvider,
+} from "@firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,5 +22,8 @@ if (!firebase.apps.length) {
 }
 
 const auth = firebase.auth();
+const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
+const gameCenterProvider = new GithubAuthProvider();
 
-export { auth };
+export { auth, googleProvider, githubProvider, gameCenterProvider };

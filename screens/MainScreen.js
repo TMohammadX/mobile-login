@@ -1,10 +1,18 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ImageBackground,
+} from "react-native";
 import React from "react";
 import { useCallback } from "react";
 import img from "../assets/ss.png";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useNavigation } from "@react-navigation/core";
+import image from "../assets/bgg.png";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -23,34 +31,36 @@ const MainScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={img} />
-      <View styles={styles.texts}>
-        <Text style={styles.text}>Discover your </Text>
-        <Text style={styles.text}>Dream job Here </Text>
+      <ImageBackground source={image} resizeMode="cover" style={styles.bgimage}>
+        <Image style={styles.image} source={img} />
+        <View styles={styles.texts}>
+          <Text style={styles.text}>Discover your </Text>
+          <Text style={styles.text}>Dream job Here </Text>
 
-        <Text style={styles.p}>
-          Explore all the most exiting jobs roles based on your intrest and
-          study major.
-        </Text>
-      </View>
-      <View style={styles.buttons}>
-        <TouchableOpacity
-          style={[styles.button, styles.buttonr]}
-          onPress={() => {
-            navigation.replace("Signup");
-          }}
-        >
-          <Text>Register</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={() => {
-            navigation.replace("Login");
-          }}
-        >
-          <Text>Sign In</Text>
-        </TouchableOpacity>
-      </View>
+          <Text style={styles.p}>
+            Explore all the most exiting jobs roles based on your intrest and
+            study major.
+          </Text>
+        </View>
+        <View style={styles.buttons}>
+          <TouchableOpacity
+            style={[styles.button, styles.buttonr]}
+            onPress={() => {
+              navigation.replace("Signup");
+            }}
+          >
+            <Text style={{ color: "white" }}>Register</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => {
+              navigation.replace("Login");
+            }}
+          >
+            <Text>Sign In</Text>
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -60,6 +70,13 @@ export default MainScreen;
 const styles = StyleSheet.create({
   container: {
     height: "100%",
+    display: "flex",
+    alignItems: "center",
+  },
+
+  bgimage: {
+    height: "100%",
+    width: "100%",
     display: "flex",
     alignItems: "center",
   },
@@ -104,7 +121,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     borderColor: "white",
-    borderWidth: 2,
+    borderWidth: 1,
   },
 
   button: {
@@ -115,6 +132,11 @@ const styles = StyleSheet.create({
   },
 
   buttonr: {
-    backgroundColor: "white",
+    backgroundColor: "#ef476f",
+
+    shadowColor: "#171717",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
   },
 });

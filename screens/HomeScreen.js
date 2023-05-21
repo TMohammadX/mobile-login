@@ -17,7 +17,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Email: {auth.currentUser?.email}</Text>
+      <Text style={styles.text}>Email: {auth.currentUser?.email}</Text>
       <TouchableOpacity onPress={handleSignOut} style={styles.button}>
         <Text style={styles.buttonText}>Sign out</Text>
       </TouchableOpacity>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    backgroundColor: "#0782F9",
+    backgroundColor: "#ef476f",
     width: "60%",
     padding: 15,
     borderRadius: 10,
@@ -43,7 +43,11 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
-    fontWeight: "700",
-    fontSize: 16,
+    fontSize: 12,
+    fontFamily: "NotoL",
+  },
+
+  text: {
+    fontFamily: "NotoR",
   },
 });
