@@ -1,5 +1,8 @@
-﻿# mobile app (firebase auth)
+﻿## mobile app (firebase auth)
  
+ ### clone the app and run npm i and npx expo i
+ ### then run npm start and press w to open in browser
+
  
 ![h](https://github.com/TMohammadX/mobile-login/assets/106634549/8702a2e2-94f4-4378-8eff-95c55e7134b3)
 ![Screenshot 2023-05-20 221103](https://github.com/TMohammadX/mobile-login/assets/106634549/8786fa6c-8778-4cf4-915d-69300ccb2060)
