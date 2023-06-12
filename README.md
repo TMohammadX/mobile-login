@@ -1,6 +1,7 @@
 ﻿## mobile app (firebase auth)
  
  ### clone the app and run npm i and npx expo i
+ ### change the id and app info for firebase in firebase.js
  ### then run npm start and press w to open in browser
 
  
